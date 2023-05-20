@@ -1,0 +1,16 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+    background-color: red;
+    color: white;
+    padding: 20px ;
+}
