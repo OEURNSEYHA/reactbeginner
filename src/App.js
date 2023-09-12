@@ -1,10 +1,11 @@
 import React from "react";
-import Parent from "./hook/usecallback/Parent";
+import Counter from "./hook/usememo/Counter";
+
 
 function App() {
   return (
     <>
-      <Parent />
+      <Counter/>
     </>
   );
 }
