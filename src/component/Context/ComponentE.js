@@ -1,19 +1,11 @@
-import React, { Component } from 'react'
-import ComponentF from './ComponentF'
-import UserContext from './Context'
-
-export class ComponentE extends Component {
-  static contextType = UserContext
-  render() {
-    return (
-      <>
-           <ComponentF/>
-          Component E context { this.context}
-       
-      </>
-    )
-  }
+import React from 'react'
+import ComponentF from'./ComponentF';
+function ComponentE() {
+  return (
+    <div>
+      <ComponentF/>
+    </div>
+  )
 }
-// ComponentE.contextType = UserContext;
 
 export default ComponentE

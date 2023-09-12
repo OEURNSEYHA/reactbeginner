@@ -1,18 +1,12 @@
+import React from "react";
+import Parent from "./hook/usecallback/Parent";
 
-import React from 'react'
-
-import './App.css'
-import FetData from './component/HTTP/FetData'
 function App() {
   return (
-    <div>
-
-      
-    <FetData/>
-
-      
-    </div>
-  )
+    <>
+      <Parent />
+    </>
+  );
 }
 
-export default App
+export default App;

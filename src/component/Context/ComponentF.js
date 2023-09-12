@@ -1,20 +1,33 @@
-import React, { Component } from 'react'
-import { UserConsumer } from './Context'
+import React  from "react";
+// import { UserGlobleContext } from "./Context";
 
-export class ComponentF extends Component {
-  render() {
-    return (
-      <>
-       <UserConsumer>
-          {
-            username =>{
-             return <h1> hello {username}</h1>
-            }
-          }
-       </UserConsumer>
-      </>
-    )
-  }
+
+function ComponentF() {
+  // const { firstName, setFirstName } = UserGlobleContext();
+  
+  return (
+    <div>
+      {/* <UserContextConsumer>
+        {(username) => {
+          return(
+            <ChannelContextConsumer>
+              {
+                channel  =>{
+                  return(
+                   <div>
+                     User context value {username} , Channel contextt value {channel}
+                   </div>
+                  )
+                }
+              }
+            </ChannelContextConsumer>
+          )
+        }}
+      </UserContextConsumer> */}
+      {/* {console.log(firstName)} */}
+      {/* <button onClick={()=> ChangeName()}> ChangeName </button> */}
+    </div>
+  );
 }
 
-export default ComponentF
+export default ComponentF;

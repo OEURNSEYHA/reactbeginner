@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import ComponentE from './ComponentE'
+import React, { Component } from "react";
+import ComponentD from "./ComponentD";
 
 export class ComponentC extends Component {
   render() {
     return (
-        <>
-            <ComponentE/>
-        </>
-    )
+      <>
+        <ComponentD />
+      </>
+    );
   }
 }
 
-export default ComponentC
+export default ComponentC;

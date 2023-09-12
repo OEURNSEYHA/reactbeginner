@@ -1,13 +1,24 @@
-import React from "react";
-const UserContext = React.createContext('Codevolution');
+// Context.js (Create and provide the context)
+import React, { createContext, useState } from "react";
+import { useContext } from "react";
 
-const UseProvider = UserContext.Provider;
-const UserConsumer = UserContext.Consumer;
+const GlobleContext = createContext();
 
-export { UseProvider, UserConsumer }
-export default UserContext;
+export const UserGlobleContext = () => useContext(GlobleContext);
 
-// 1 crate the context 
-// 1 create the context 
+const Context = ({ children }) => {
+   const [firstName, setFirstName] = useState("seyha"); // You can set an initial value here
+  // const firstName = "hello";
+  return (
+    <GlobleContext.Provider value={{ firstName, setFirstName }}>
+      {children}
+    </GlobleContext.Provider>
+  );
+};
+
+export default Context;
+// export {  UserGlobleContext , UserGlobleContext};
+
+// 1 crate the context
 // 2 providea context value
-// 3 Consume tthe contex value 
+// 3 Consume the contex value
