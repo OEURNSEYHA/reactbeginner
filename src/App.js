@@ -1,11 +1,14 @@
 import React from "react";
-import Counter from "./hook/usememo/Counter";
-
-
+import { createContext } from "react";
+const UserContext = createContext()
 function App() {
+  
   return (
     <>
-      <Counter/>
+
+    <UserContext.Provider value={"helo"}>
+
+    </UserContext.Provider>
     </>
   );
 }

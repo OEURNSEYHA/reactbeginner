@@ -1,8 +1,10 @@
 import React, {useReducer } from 'react'
 
+
 const initialState = {
     firstCounter : 0,
     secondcounter : 10
+
 };
 
 const reducer = (state, action) =>{

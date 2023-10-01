@@ -20,5 +20,5 @@ export default Context;
 // export {  UserGlobleContext , UserGlobleContext};
 
 // 1 crate the context
-// 2 providea context value
+// 2 provider context value
 // 3 Consume the contex value

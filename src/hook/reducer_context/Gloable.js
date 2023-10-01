@@ -2,10 +2,11 @@ import React, { useReducer } from 'react'
 import { useContext } from 'react';
 import { createContext } from 'react'
 
-const GloableState = createContext();
+const GloableState = createContext("hello");
 export const UserGloableState = () => useContext(GloableState);
 
 const initialState = 0;
+
 const reducer = (state, action) => {
   if(action.type === 'increment'){
     return state + 1
