@@ -1,14 +1,13 @@
 import React from "react";
-import { createContext } from "react";
-const UserContext = createContext()
+import { UserGlobleContext } from "./component/Context/Context";
+
+
 function App() {
-  
+  const {firstName, setFirstName} = UserGlobleContext();
   return (
     <>
-
-    <UserContext.Provider value={"helo"}>
-
-    </UserContext.Provider>
+      <button onClick={()=> setFirstName("hello")}>  {firstName}   </button>
+  
     </>
   );
 }

@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from'react-router-dom'; 
-// import Context from './component/Context/Context';
+import Context from './component/Context/Context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
     <BrowserRouter>
-    {/* <Context> */}
+    <Context>
     <App />
 
-    {/* </Context> */}
+    </Context>
     </BrowserRouter>
   </React.StrictMode>
 
