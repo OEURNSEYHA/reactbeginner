@@ -1,19 +1,23 @@
 import React from "react";
-import CakeContainer from "./redux/component/CakeContainer";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import HookContainer from "./redux/component/HookContainer";
-import IceCreamContainer from "./redux/component/IceCreamContainer";
+
+import { UserGloableState } from "./hook/reducer_context/Gloable";
+import { buyPizza } from "./hook/reducer_context/pizzaAction";
+
+
 
 function App() {
+  const { count, dispatch } = UserGloableState();
   return (
-    <Provider store={store}>
-      <div>
-        <CakeContainer />
-        <HookContainer />
-        <IceCreamContainer/>
-      </div>
-    </Provider>
+    <>
+      {count.numOfPizza}
+      <button
+        onClick={() => {
+          dispatch(buyPizza());
+        }}
+      >
+        Increment
+      </button>
+    </>
   );
 }
 
