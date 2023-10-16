@@ -1,10 +1,10 @@
 import { BUY_CAKE, SELL } from "./cakeType";
 
-const intallState = {
+const initialState = {
   numOfCakes: 10,
 };
 
-const cakeReducer = (state = intallState, action) => {
+const cakeReducer = (state = initialState, action) => {
   switch (action.type) {
     case BUY_CAKE:
       return {
