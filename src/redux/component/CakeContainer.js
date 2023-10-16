@@ -1,5 +1,5 @@
 import React from "react";
-import { buyCake } from "../../redux";
+import {buyCake, sellCake} from '../../redux'
 import { connect } from "react-redux";
 
 function CakeContainer(props) {
@@ -7,6 +7,7 @@ function CakeContainer(props) {
     <div>
       <h2> Number of cakes = {props.numOfCakes} </h2>
       <button onClick={props.buyCake}> Buy Cake </button>
+      <button onClick={props.sellCake}> Buy Cake </button>
     </div>
   );
 }
@@ -17,10 +18,18 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDisppatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    buyCake: () => dispatch(buyCake),
+    sellCake: () => dispatch(sellCake()),
+    buyCake: ()=> dispatch(buyCake())
   };
 };
 
-export default connect(mapStateToProps, mapDisppatchToProps)(CakeContainer);
+
+// const inCrement = dispatch => {
+//   return {
+//     sellCake: () => dispatch(sellCake()),
+//   };
+// };
+
+export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);
