@@ -8,6 +8,7 @@ export const UserGlobleContext = () => useContext(GlobleContext);
 
 const Context = ({ children }) => {
    const [firstName, setFirstName] = useState("seyha"); // You can set an initial value here
+   
   // const firstName = "hello";
   return (
     <GlobleContext.Provider value={{ firstName, setFirstName }}>

@@ -1,13 +1,13 @@
 import React from "react";
-import { UserGlobleContext } from "./component/Context/Context";
+import CakeContainer from "./redux/component/CakeContainer";
+
 
 
 function App() {
-  const {firstName, setFirstName} = UserGlobleContext();
+ 
   return (
     <>
-      <button onClick={()=> setFirstName("hello")}>  {firstName}   </button>
-  
+     <CakeContainer/>
     </>
   );
 }
