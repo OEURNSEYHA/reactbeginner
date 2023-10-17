@@ -4,16 +4,21 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import Gloable from "./hook/reducer_context/Gloable";
+// import Gloable from "./hook/reducer_context/Gloable";
+import { Provider } from "react-redux";
+import  store  from "./redux/store";
 // import Context from './component/Context/Context';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Provider store={store}>
+
       {/* <Context> */}
-      <Gloable>
+      {/* <Gloable> */}
         <App />
-      </Gloable>
+      {/* </Gloable> */}
+    </Provider>
 
       {/* </Context> */}
     </BrowserRouter>

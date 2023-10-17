@@ -1,3 +1,2 @@
-export { buyCake } from "../../redux";
-
+export { buyPizza, orderPizza } from "./pizzaAction";
 

@@ -1,22 +1,10 @@
 import React from "react";
-
-import { UserGloableState } from "./hook/reducer_context/Gloable";
-import { buyPizza } from "./hook/reducer_context/pizzaAction";
-
-
-
+import CakeContainer from "./redux/component/CakeContainer"
 function App() {
-  const { count, dispatch } = UserGloableState();
+  
   return (
     <>
-      {count.numOfPizza}
-      <button
-        onClick={() => {
-          dispatch(buyPizza());
-        }}
-      >
-        Increment
-      </button>
+      <CakeContainer/>
     </>
   );
 }
