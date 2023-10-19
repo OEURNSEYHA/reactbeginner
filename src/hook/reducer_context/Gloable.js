@@ -9,10 +9,8 @@ export const UserGloableState = () => useContext(GloableState);
 
 const initialState = {
   numOfPizza: 0,
-  numOfOrder : 20
-
-}; 
-
+  numOfOrder: 20,
+};
 
 function Gloable({ children }) {
   const firstName = "seyha";
@@ -20,10 +18,11 @@ function Gloable({ children }) {
   const [buy2, dispatchTwo] = useReducer(reducer, initialState);
 
   return (
-    <GloableState.Provider value={{ firstName, buy, dispatch,buy2,  dispatchTwo }}>
+    <GloableState.Provider
+      value={{ firstName, buy, dispatch, buy2, dispatchTwo }}
+    >
       {children}
     </GloableState.Provider>
-
   );
 }
 

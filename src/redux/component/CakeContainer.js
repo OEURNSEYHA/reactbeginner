@@ -27,10 +27,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-// const inCrement = dispatch => {
-//   return {
-//     sellCake: () => dispatch(sellCake()),
-//   };
-// };
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);

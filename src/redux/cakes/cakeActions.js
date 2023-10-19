@@ -6,8 +6,9 @@ export const buyCake = () => {
   };
 };
 
-export const sellCake = () => {
+export const sellCake = (num = 1) => {
   return {
     type: SELL,
+    payload: num
   };
 };

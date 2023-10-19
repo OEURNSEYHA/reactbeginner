@@ -16,7 +16,7 @@ const cakeReducer = (state = initialState, action) => {
     case SELL :
       return {
         ...state,
-        numOfSell: state.numOfSell + 1
+        numOfSell: state.numOfSell + parseInt(action.payload) 
       }
 
     default:

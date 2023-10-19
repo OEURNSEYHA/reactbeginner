@@ -22,5 +22,7 @@ export const HookContainer = (props) => {
 
 // const mapStateToProps = (state) => ({})
 // const mapDispatchToProps = {}
+// export default connect(mapStateTopProps, mapDispatchToProp)(HookContainer);
+
 
 export default HookContainer;
