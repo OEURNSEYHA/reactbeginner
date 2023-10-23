@@ -7,9 +7,9 @@ export const buyPizza = () => {
   };
 };
 
-export const orderPizza = () => {
+export const orderPizza = (num = 1) => {
   return {
     type: ORDER_PIZZA,
-    order: 20,
+    order: num,
   };
 };

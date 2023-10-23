@@ -1,14 +1,15 @@
 import React from "react";
-import { connect } from "react-redux";
-import { buyCake} from "../cakes/cakeActions";
-import { buyIceCream } from "../icecream/icecreamAction";
+import { connect, } from "react-redux";
+// import { buyCake } from "../cakes/cakeActions";
+// import { buyIceCream } from "../icecream/icecreamAction";
 
 export const ItemContainer = (props) => {
+
+  
 
   return (
     <div>
       ItemContainer Item {props.item}
-
       <button onClick={props.buyItem}> BUY Item </button>
     </div>
   );
@@ -24,13 +25,13 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProp = (dispatch, ownProps) => {
-  const dispatchFunction = ownProps.cake
-    ? () => dispatch(buyCake())
-    : () => dispatch(buyIceCream());
-  return {
-    buyItem: dispatchFunction,
-  };
-};
+// const mapDispatchToProp = (dispatch, ownProps) => {
+//   const dispatchFunction = ownProps.cake
+//     ? () => dispatch(buyCake())
+//     : () => dispatch(buyIceCream());
+//   return {
+//     buyItem: dispatchFunction,
+//   };
+// };
 
-export default connect(null, mapDispatchToProp)(ItemContainer);
+export default connect(mapStateToProps, null)(ItemContainer);
