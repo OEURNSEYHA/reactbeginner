@@ -10,7 +10,7 @@ function App() {
     <UserContainer/>
     <CakeContainer/>
     <IceCreamContainer/>
-    <ItemContainer iceCream/>
+    <ItemContainer iceCream />
     </>
   )
 }
