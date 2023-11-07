@@ -34,7 +34,7 @@ export const fetchUsers = () => {
       )
       .then((result) => {
         const users = result.data.data;
-        console.log(result.data.data);
+        console.log(result);
         dispatch(fetchUsersSuccess(users));
       })
       .catch((err) => {

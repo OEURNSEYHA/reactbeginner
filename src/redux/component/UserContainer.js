@@ -1,18 +1,21 @@
 import React, { useEffect } from "react";
 import {  useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../user/userAction";
+import { fetchUsers } from "../user/fetchUsers";
+
 
 export const UserContainer = () => {
-    const userData = useSelector((state) => state.user)
+    const userData = useSelector((state) => state.user);
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(fetchUsers())
-        console.log("hello")
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
+    console.log(userData);
+
   return userData.loading ? (
-    <h2> Loading...</h2>
+    <h2> loading...</h2>
   ) : userData.error ? (<h2> {userData.error} </h2>) : (
     <div> {userData && userData.users && userData.users.map((user, id)=>(
     <p key={id}> {user.name}</p>

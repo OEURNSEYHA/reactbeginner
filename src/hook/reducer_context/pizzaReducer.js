@@ -12,7 +12,7 @@ export const reducer = (state, action) => {
     case ORDER_PIZZA: {
       return {
         ...state,
-        numOfOrder : state.numOfOrder + actwwwwwwion.order,
+        numOfOrder : state.numOfOrder + action.order,
       };
     }
 
