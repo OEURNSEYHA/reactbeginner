@@ -2,8 +2,6 @@ import {  ORDER_PIZZA } from "./pizzaType";
 
 export const appleReducer = (state, action) => {
   switch (action.type) {
-   
-
     case ORDER_PIZZA: {
       return {
         ...state,

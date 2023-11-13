@@ -1,18 +1,15 @@
-import React from 'react'
-import UserContainer from './redux/component/UserContainer'
-import ItemContainer from './redux/component/ItemContainer'
-import CakeContainer from './redux/component/CakeContainer.js'
-import IceCreamContainer from './redux/component/IceCreamContainer.js'
+import React from "react";
+import { UserGloableState } from "./hook/reducer_context/Gloable";
+import { buyPizza } from "./hook/reducer_context/pizzaAction";
+
 function App() {
-  return (
-    <>
-    
-    <UserContainer/>
-    <CakeContainer/>
-    <IceCreamContainer/>
-    <ItemContainer iceCream />
-    </>
-  )
+  const { buy, dispatch } = UserGloableState();
+  return <>
+  {buy.numOfPizza}
+  <button onClick={()=>dispatch(buyPizza())}>
+     BUY PIZZA
+  </button>
+  </>;
 }
 
-export default App
+export default App;
