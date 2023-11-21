@@ -4,7 +4,6 @@ import { fetchUsers } from "../user/fetchUsers";
 
 export const UserContainer = () => {
   const userData = useSelector((state) => state.user);
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchUsers());
