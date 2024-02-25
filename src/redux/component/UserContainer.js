@@ -14,7 +14,7 @@ export const UserContainer = () => {
   console.log(userData);
 
   return userData.loading ? (
-    <h2> loading...</h2>
+    <h2> loading... </h2>
   ) : userData.error ? (
     <h2> {userData.error} </h2>
   ) : (

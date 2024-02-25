@@ -1,12 +1,12 @@
-import React  from "react";
+import React from "react";
 // import { UserGlobleContext } from "./Context";
-
 
 function ComponentF() {
   // const { firstName, setFirstName } = UserGlobleContext();
-  
+
   return (
     <div>
+      
       {/* <UserContextConsumer>
         {(username) => {
           return(

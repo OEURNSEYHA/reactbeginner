@@ -15,8 +15,6 @@ export const reducer = (state, action) => {
         numOfOrder : state.numOfOrder + action.order,
       };
     }
-
-    
     default:
       return state;
   }

@@ -17,13 +17,11 @@ function Login() {
       .then((response) => {
         if (email !== "" && !password !== "") {
           // console.log(result.data);
-
           console.log(response.data);
-
           document.cookie = `token=${response.data.token}; path=/,  expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-    httpOnly: true,
-    secure: true, // Make sure to set this for HTTPS
-    sameSite: "Strict", // Recommended for added security `;
+            httpOnly: true,
+            secure: true, // Make sure to set this for HTTPS
+            sameSite: "Strict", // Recommended for added security `;
           // navigate(redirectPath, { replace: true });
         }
       })

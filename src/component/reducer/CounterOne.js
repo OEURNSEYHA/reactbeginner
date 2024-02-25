@@ -14,9 +14,9 @@ const reducer = (state, action) =>{
    }
 }
 
-function CounterOne() {
+function CounterOne(props) {
     const [count, dispatch] = useReducer(reducer, initialState);
-
+console.log(props)
   return (
     <div>
         <div> Coun - {count} </div>
